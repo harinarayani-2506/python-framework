@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-10-25T13:46:54.949545" rpa="false" schemaversion="5">
+<suite id="s1" name="Sycamore Assessment" source="D:\Sycamore_Assessment">
+<suite id="s1-s1" name="Tests" source="D:\Sycamore_Assessment\Tests">
+<suite id="s1-s1-s1" name="AssessmentTest" source="D:\Sycamore_Assessment\Tests\AssessmentTest.robot">
+<test id="s1-s1-s1-t1" name="Compare BrowserStack Application names" line="6">
+<kw name="Open BrowserStack Application and scroll to Test your websites and mobile Apps" owner="Updated_Feature_Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-25T13:46:55.314400" level="INFO">Opening browser 'Chrome' to base url 'https://www.browserstack.com'.</msg>
+<arg>url=https://www.browserstack.com</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-25T13:46:55.314400" elapsed="7.929648"/>
+</kw>
+<kw name="Initialize webdriver" owner="Updated_Feature_Keywords">
+<kw name="Get Library Instance" owner="BuiltIn">
+<msg time="2024-10-25T13:47:03.244048" level="INFO">${current_webdriver} = &lt;SeleniumLibrary.SeleniumLibrary object at 0x000001D954F54E90&gt;</msg>
+<var>${current_webdriver}</var>
+<arg>name=SeleniumLibrary</arg>
+<doc>Returns the currently active instance of the specified library.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.244048" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:03.244048" level="INFO">${current_webdriver} = &lt;SeleniumLibrary.SeleniumLibrary object at 0x000001D954F54E90&gt;</msg>
+<arg>${current_webdriver}</arg>
+<arg>${current_webdriver}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.244048" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:03.244048" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.244048" elapsed="0.117518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://button[@id='developers-dd-toggle']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.362306" elapsed="0.134273"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-25T13:47:03.497789" level="INFO">Simulating Mouse Over on element 'xpath://button[@id='developers-dd-toggle']'.</msg>
+<arg>xpath://button[@id='developers-dd-toggle']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.497789" elapsed="0.411706"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-25T13:47:03.909495" level="INFO">Clicking element 'xpath://*[@id='developers-dd-menu']/div/div[1]/a'.</msg>
+<arg>xpath://*[@id='developers-dd-menu']/div/div[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-25T13:47:03.909495" elapsed="2.241555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//h1[@class='hero-section__heading']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:06.151050" elapsed="0.071490"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:46:55.298877" elapsed="10.923663"/>
+</kw>
+<kw name="Get Featured Application names" owner="Updated_Feature_Keywords">
+<kw name="Get Documentation application names" owner="Feature_Definitions">
+<msg time="2024-10-25T13:47:06.631498" level="INFO">${featured_List} = {'FEATURED PRODUCTS': ['Automate', 'App Automate', 'Percy', 'Live', 'App Live']}</msg>
+<var>${featured_List}</var>
+<arg>${current_webdriver}</arg>
+<arg>rootLocator=//div[@class='hero-section__featured-products-subsection']</arg>
+<arg>headingName_Locator=//h3[@class='hero-section__subsection-heading']</arg>
+<arg>appName_List_Locator=//ul[@class='hero-section__featured-products-list']//div[@class='hero-section__featured-product-header']//p</arg>
+<status status="PASS" start="2024-10-25T13:47:06.222540" elapsed="0.408958"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:06.631498" level="INFO">${featured_List} = {'FEATURED PRODUCTS': ['Automate', 'App Automate', 'Percy', 'Live', 'App Live']}</msg>
+<arg>${featured_List}</arg>
+<arg>${featured_List}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:06.631498" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:06.222540" elapsed="0.408958"/>
+</kw>
+<kw name="Get AllProducts Application Names" owner="Updated_Feature_Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=//div[@class="all-products__content"]//h2</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-10-25T13:47:06.631498" elapsed="0.375830"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//div[@class="all-products__content"]//h2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:07.007328" elapsed="0.062751"/>
+</kw>
+<kw name="Get Library Instance" owner="BuiltIn">
+<msg time="2024-10-25T13:47:07.070079" level="INFO">${current_webdriver} = &lt;SeleniumLibrary.SeleniumLibrary object at 0x000001D954F54E90&gt;</msg>
+<var>${current_webdriver}</var>
+<arg>name=SeleniumLibrary</arg>
+<doc>Returns the currently active instance of the specified library.</doc>
+<status status="PASS" start="2024-10-25T13:47:07.070079" elapsed="0.000000"/>
+</kw>
+<kw name="Get sub headings of all products" owner="Feature_Definitions">
+<msg time="2024-10-25T13:47:07.649989" level="INFO">${allProducts_dict} = {'WEB TESTING': ['Live\nManual cross browser testing', 'Automate\nBrowser automation grid', 'Percy\nAutomated visual testing &amp; review', 'Accessibility Testing\nTest WCAG &amp; ADA compliance', 'Automate T...</msg>
+<var>${allProducts_dict}</var>
+<arg>${current_webdriver}</arg>
+<status status="PASS" start="2024-10-25T13:47:07.070079" elapsed="0.579910"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:07.649989" level="INFO">${allProducts_dict} = {'WEB TESTING': ['Live\nManual cross browser testing', 'Automate\nBrowser automation grid', 'Percy\nAutomated visual testing &amp; review', 'Accessibility Testing\nTest WCAG &amp; ADA compliance', 'Automate T...</msg>
+<arg>${allProducts_dict}</arg>
+<arg>${allProducts_dict}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:07.649989" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:06.631498" elapsed="1.018491"/>
+</kw>
+<kw name="Get Popular Topics Application names" owner="Updated_Feature_Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=//section[@class='popular-topics']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-10-25T13:47:07.649989" elapsed="0.360273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//section[@class='popular-topics']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:08.010262" elapsed="0.058232"/>
+</kw>
+<kw name="Get Documentation application names" owner="Feature_Definitions">
+<msg time="2024-10-25T13:47:08.544156" level="INFO">${popularTopics_List} = {'Popular Topics': ['BrowserStack SDK', 'Local Testing', 'Enterprise', 'Account Management', 'Browsers and Devices', 'Release Notes']}</msg>
+<var>${popularTopics_List}</var>
+<arg>${current_webdriver}</arg>
+<arg>rootLocator=//section[@class='popular-topics']</arg>
+<arg>headingName_Locator=//h2[@class='popular-topics__heading']</arg>
+<arg>appName_List_Locator=//ul[@class='popular-topics__list']//a//div[@class='condensed-card__text-container']//p[@class='condensed-card__text-name']</arg>
+<status status="PASS" start="2024-10-25T13:47:08.068494" elapsed="0.475662"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:08.544156" level="INFO">${popularTopics_List} = {'Popular Topics': ['BrowserStack SDK', 'Local Testing', 'Enterprise', 'Account Management', 'Browsers and Devices', 'Release Notes']}</msg>
+<arg>${popularTopics_List}</arg>
+<arg>${popularTopics_List}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:08.544156" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:07.649989" elapsed="0.894167"/>
+</kw>
+<kw name="Get Tools Application names" owner="Updated_Feature_Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=//section[@class='tools']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-10-25T13:47:08.544156" elapsed="0.351234"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//section[@class='tools']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:08.895390" elapsed="0.040883"/>
+</kw>
+<kw name="Get Documentation application names" owner="Feature_Definitions">
+<msg time="2024-10-25T13:47:09.347608" level="INFO">${tools_List} = {'Tools': ['Code Quality', 'Nightwatch', 'SpeedLab', 'Screenshots', 'Responsive']}</msg>
+<var>${tools_List}</var>
+<arg>${current_webdriver}</arg>
+<arg>rootLocator=//section[@class='tools']</arg>
+<arg>headingName_Locator=//h2[@class='tools__heading']</arg>
+<arg>appName_List_Locator=//ul[@class='tools__list']//div[@class='minimal-card__text-container']//p[@class='minimal-card__text-name']</arg>
+<status status="PASS" start="2024-10-25T13:47:08.936273" elapsed="0.411335"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:09.347608" level="INFO">${tools_List} = {'Tools': ['Code Quality', 'Nightwatch', 'SpeedLab', 'Screenshots', 'Responsive']}</msg>
+<arg>${tools_List}</arg>
+<arg>${tools_List}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:09.347608" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:08.544156" elapsed="0.803452"/>
+</kw>
+<kw name="Get Support Application names" owner="Updated_Feature_Keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>locator=//section[@class='support']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-10-25T13:47:09.347608" elapsed="0.383540"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//section[@class='support']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-25T13:47:09.731148" elapsed="0.031911"/>
+</kw>
+<kw name="Get Documentation application names" owner="Feature_Definitions">
+<msg time="2024-10-25T13:47:10.018218" level="INFO">${support_List} = {'Support': ['Help Center', 'Status', 'Contact Support']}</msg>
+<var>${support_List}</var>
+<arg>${current_webdriver}</arg>
+<arg>rootLocator=//section[@class='support']</arg>
+<arg>headingName_Locator=//h2[@class='support__heading']</arg>
+<arg>appName_List_Locator=//ul[@class='support__list']//div[@class='condensed-card__text-container']//p[@class='condensed-card__text-name']</arg>
+<status status="PASS" start="2024-10-25T13:47:09.763059" elapsed="0.255159"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.020401" level="INFO">${support_List} = {'Support': ['Help Center', 'Status', 'Contact Support']}</msg>
+<arg>${support_List}</arg>
+<arg>${support_List}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.019327" elapsed="0.002087"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:09.347608" elapsed="0.674868"/>
+</kw>
+<kw name="Display All Details of Documentation Page" owner="Updated_Feature_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.023650" level="INFO">{'FEATURED PRODUCTS': ['Automate', 'App Automate', 'Percy', 'Live', 'App Live']}</msg>
+<arg>${featured_List}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.023650" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.029802" level="INFO">{'WEB TESTING': ['Live\nManual cross browser testing', 'Automate\nBrowser automation grid', 'Percy\nAutomated visual testing &amp; review', 'Accessibility Testing\nTest WCAG &amp; ADA compliance', 'Automate TurboScale\nAutomation on your cloud', 'Low Code Automation\nAutomation without coding'], 'APP TESTING': ['App Live\nManual real device testing', 'App Automate\nReal device automation cloud', 'App Percy\nAutomated visual testing &amp; review', 'App Accessibility Testing\nTest WCAG compliance'], 'TEST MANAGEMENT &amp; OPTIMIZATION': ['Test Management\nUnify &amp; track all test cases', 'Test Observability\nTest debugging &amp; insights']}</msg>
+<arg>${allProducts_dict}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.028300" elapsed="0.001502"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.031782" level="INFO">{'Popular Topics': ['BrowserStack SDK', 'Local Testing', 'Enterprise', 'Account Management', 'Browsers and Devices', 'Release Notes']}</msg>
+<arg>${popularTopics_List}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.030767" elapsed="0.001863"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.034341" level="INFO">{'Tools': ['Code Quality', 'Nightwatch', 'SpeedLab', 'Screenshots', 'Responsive']}</msg>
+<arg>${tools_List}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.032630" elapsed="0.001711"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-25T13:47:10.034341" level="INFO">{'Support': ['Help Center', 'Status', 'Contact Support']}</msg>
+<arg>${support_List}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.034341" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:47:10.023650" elapsed="0.010691"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-25T13:47:10.042074" elapsed="2.777814"/>
+</kw>
+<status status="PASS" start="2024-10-25T13:46:55.298877" elapsed="17.521011"/>
+</test>
+<status status="PASS" start="2024-10-25T13:46:55.014778" elapsed="17.805110"/>
+</suite>
+<status status="PASS" start="2024-10-25T13:46:55.006773" elapsed="17.813115"/>
+</suite>
+<status status="PASS" start="2024-10-25T13:46:54.966358" elapsed="17.853530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sycamore Assessment">Sycamore Assessment</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Sycamore Assessment.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="AssessmentTest">Sycamore Assessment.Tests.AssessmentTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
